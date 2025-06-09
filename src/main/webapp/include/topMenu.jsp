@@ -17,7 +17,7 @@
 				<a href="/Board-WEB/board/list.do">게시판</a> |
 				<c:choose>
 					<c:when test="${ empty userVO }">
-						회원가입 |
+                                        <a href="/Board-WEB/member/register.jsp">회원가입</a> |
 						<a href="/Board-WEB/login.do">로그인</a> |
 					</c:when>
 					<c:otherwise>
