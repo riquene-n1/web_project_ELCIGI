@@ -9,5 +9,11 @@ public interface MemberDAO {
 	 * @param loginVO  사용자가 입력한 ID,PASSORD를 저장한 객체
 	 * @return 로그인 성공시 회원정보를 가진 MemberVO 객체 반환, 로그인 실패시 null 반환
 	 */
-	public MemberVO selectMemberByIDPassword(MemberVO loginVO) throws Exception;
+    public MemberVO selectMemberByIDPassword(MemberVO loginVO) throws Exception;
+
+    /**
+     * 회원가입 기능
+     * @param member 신규 회원 정보
+     */
+    public void insertMember(MemberVO member) throws Exception;
 }

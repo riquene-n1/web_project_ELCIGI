@@ -12,7 +12,11 @@ public class MemberService {
 		memberDao = new MemberDAOImpl();
 	}
 
-	public MemberVO login(MemberVO member) throws Exception {
-		return memberDao.selectMemberByIDPassword(member);
-	}
+        public MemberVO login(MemberVO member) throws Exception {
+                return memberDao.selectMemberByIDPassword(member);
+        }
+
+        public void register(MemberVO member) throws Exception {
+                memberDao.insertMember(member);
+        }
 }
